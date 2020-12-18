@@ -1,0 +1,515 @@
+/***************************** DEFAULT STYLES (ABSOLUTE) ******************************/
+
+@font-face {
+    font-family: 'Monsterrat Bold';
+    src: url(../../fonts/Montserrat-Bold.ttf);
+    font-weight: normal;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 18px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    color: #3C3F50;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+}
+
+/********************************* TOP NAVIGATION STYLE ********************************/
+
+.nav {
+    position: fixed;
+    width: 80px;
+    height: 100px;
+    background: url(../../img/bg-13.jpg) no-repeat bottom;
+    background-size: cover;
+    z-index: 100;
+    top: -30px;
+    left: calc((100vw - 80px) / 2);
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 7px 20px rgba(100, 240, 210, .2);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.nav .icon {
+    margin-top: 45px;
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    color: #FFF;
+}
+
+.nav:hover {
+    top: 0;
+    box-shadow: 0 7px 20px rgba(100, 240, 210, .3);
+    background-position: top;
+}
+
+.nav .text {
+    position: absolute;
+    /* right: -150px; */
+    top: 48px;
+    font-size: 20px;
+    width: 150px;
+    text-align: right;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    text-transform: uppercase;
+    transition: all .3s, opacity .1s;
+    opacity: 0;
+}
+
+/***************************** SECTION 1 - LOADING SECTION ****************************/
+
+.section-1 {
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #182736 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #182736 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #182736 2%, #002025 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.load-bar {
+    width: 50%;
+    height: 2px;
+    top: calc((100vh - 2px) / 2);
+    left: 25%;
+    position: absolute;
+    background: #3e4a55;
+    border-radius: 50px;
+}
+
+.load-text {
+    text-align: center;
+    margin-top: calc((100vh - 90px - 2px) / 2);
+    font-size: 30px;
+    color: #3e4a55;
+}
+
+.load-inner {
+    float: left;
+    width: 0;
+    height: 2px;
+    background: #738697;
+}
+
+/******************* SECTION 2 - SECTION WHERE LOCATED START BUTTON *******************/
+
+.section-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+    overflow: hidden;
+}
+
+.section-2 video {
+    width: 100%;
+}
+
+.section-2 .start-btn {
+    width: 150px;
+    height: 150px;
+    background: #FFF url(../../img/blurred-image-1.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: calc((100vh - 150px) / 2);
+    left: calc((100vw - 150px) / 2);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform .3s;
+    box-shadow: 0 0 40px rgba(230, 242, 248, 0.3);
+}
+
+.section-2 .text {
+    width: 130px;
+    border-bottom: 2px solid #E7F3F9;
+    position: fixed;
+    color: #FFF;
+    top: calc((100vh - 54px) / 2);
+    left: calc((100vw - 132px) / 2);
+    font-size: 20px;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: left .3s;
+    display: none;
+}
+
+.section-2 .email {
+    position: fixed;
+    right: -50px;
+    bottom: 150px;
+    height: 17px;
+    font-size: 17px;
+    transform: rotate(-90deg);
+}
+
+.section-2 .email a {
+    color: #FFF;
+    transition: color .3s;
+}
+
+.section-2 .email a:hover {
+    color: #CCC;
+}
+
+.section-2 .email .line {
+    border-bottom: 1px solid #FFF;
+    width: 50px;
+    position: absolute;
+    bottom: 3px;
+    left: -60px;
+}
+
+/************************** SECTION 3 - MAIN MENU WITH STARS **************************/
+
+.section-3 {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    transform: scale(0.5);
+    top: calc((100vh - 50px) / 2);
+    left: calc((100vw - 50px) / 2);
+    opacity: 0;
+    transition: all .3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #182736 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #182736 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #182736 2%, #002025 100%);
+    overflow: hidden;
+}
+
+.section-3 .link {
+    position: fixed;
+    border-bottom: 1px solid #FFF;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-family: "Segoe UI Light";
+    color: #E7F3F9;
+    cursor: pointer;
+}
+
+.section-3 .link-1 {
+    top: 50px;
+    left: 150px;
+}
+
+.section-3 .link-2 {
+    right: 150px;
+    top: calc((100vh - 100px) / 2);
+}
+
+.section-3 .link-3 {
+    top: calc((100vh + 150px) / 2);
+    left: calc((100vw - 400px) / 2);
+}
+
+.section-3 .link .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: 59px;
+    margin-left: -36px;
+    transition: all .3s;
+}
+
+.section-3 .link .line {
+    height: 1px;
+    background: #FFF;
+    transform: rotate(-30deg);
+    width: 30px;
+    margin-top: 54px;
+    margin-left: -28px;
+    position: absolute;
+}
+
+/*************************** SECTION 4 - MAIN PAGE ABOUT ME ****************************/
+
+.section-4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    /* z-index: 99; */
+    width: 100%;
+    background: #F3F5F7;
+}
+
+.section-4 .hero {
+    padding: 4%;
+    height: 100vh;
+    background-image: url(../../img/media.png), url(../../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 95% center, center;
+    background-size: 50vh auto, cover;
+    color: #FFF;
+}
+
+.section-4 h2 {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: "Segoe UI";
+    margin-top: 5vh;
+}
+
+.section-4 h2 .line {
+    width: 30px;
+    display: inline-block;
+    height: 10px;
+    border-top: 1px solid #FFF;
+}
+
+.section-4 .hero h1 {
+    text-transform: uppercase;
+    font-family: "Segoe UI Light";
+    font-size: 9vh;
+    letter-spacing: 0;
+    margin-top: 18vh;
+    text-shadow: 0 0 20px rgba(255, 255, 255, .4);
+    max-width: 800px;
+}
+
+.section-4 .hero h1 .uzb {
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 5px solid transparent;
+    transition: all .3s;
+    font-family: "Segoe UI Black";
+    text-shadow: -3px -3px 1px #04243350;
+}
+
+.section-4 .hero h1 .uzb:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, .4);
+    border-bottom: 5px solid #FFF;
+}
+
+.section-4 .img {
+    position: absolute;
+    right: -120px;
+    bottom: 0px;
+    width: 400px;
+    height: 100px;
+    transform: rotate(-35deg);
+    background: url(../../img/bg-13.jpg) no-repeat right bottom;
+    background-size: cover;
+}
+
+.uzb-section {
+    width: 30%;
+    position: fixed;
+    top: 0;
+    right: -30%;
+    height: 100%;
+    background: url(../../img/1.jpg) no-repeat;
+    background-size: cover;
+    z-index: 100;
+    opacity: 0;
+    transition: all 1s;
+    box-shadow: -10px 0 30px rgba(56, 54, 65, .4);
+}
+
+.section-4 .hero p {
+    font-size: 5vh;
+    margin-top: 2vh;
+}
+
+.section-4 .blink {
+    position: absolute;
+    margin-top: -0.6vh;
+    margin-left: 0.7vh;
+    font-weight: bolder;
+    font-size: 5vh;
+    animation: blink 0.7s linear infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.section-4 .start-btn,
+.section-5 .start-btn {
+    width: 72px;
+    height: 72px;
+    background: #FFF url(../../img/blurred-image-1.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    left: calc((100vw - 72px) / 2);
+    transition: transform .3s;
+    box-shadow: 0 0 40px rgba(230, 242, 248, 0.3);
+    cursor: pointer;
+}
+
+.section-4 .start-btn .inner,
+.section-5 .start-btn .inner {
+    width: 24px;
+    height: 24px;
+    background: #2c2d44;
+    transform: rotate(45deg);
+    margin: 24px;
+    transition: all .3s;
+}
+
+.section-4 .start-btn .inner:hover,
+.section-5 .start-btn .inner:hover {
+    width: 29px;
+    height: 29px;
+    margin: 21.5px;
+}
+
+/************************** SECTION 4 - SLIDES ABOUT MY START **************************/
+
+.section-5 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    z-index: 100000;
+    display: none;
+    transition: all 1s;
+}
+
+.section-5 .opacity {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 40px;
+    line-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.page {
+    position: absolute;
+    width: 50vw;
+    left: -50vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.page-1 {
+    color: red;
+    font-family: adsjkadnj;
+    background: black;
+}
+
+.page-1 * {
+    margin: 10px 10px;
+}
+
+.page-2,
+.page-3,
+.page-4 {
+    color: #111;
+    font-family: Arial;
+    background: #EEE;
+}
+
+.page-3 img {
+    float: left;
+}
+
+.page-3 h1 {
+    text-align: right;
+}
+
+.page-4 {
+    font-family: "Impact";
+    text-align: center;
+}
+
+.page-4 img {
+    display: block;
+    margin: 0 auto;
+}
+
+.page-4 * {
+    margin: 30px 10px;
+}
+
+.section-5 .start-btn {
+    margin-top: calc((100vh - 72px) / 2);
+    position: static;
+    display: inline-block;
+}
+
+.section-5 span {
+    float: right;
+    top: -3px;
+    left: calc((100vw + 72px + 40px) / 2);
+    position: absolute;
+    display: block;
+}
+
+.section-6 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+}
+
+.section-6 .container {
+    position: absolute;
+    height: 80vh;
+    top: 10vh;
+    left: 10%;
+    width: 4000px;
+    background: #EFEFEF;
+    /* transition: all .3s linear; */
+}
+
+.section-6 .color {
+    height: 80vh;
+    float: left;
+    width: 800px;
+}
+
+.section-6 .container .color-1 {background: #EFEFEF}
+.section-6 .container .color-2 {background: #FFF}
+.section-6 .container .color-3 {background: #182736}
+.section-6 .container .color-4 {background: #cf4b4b}
+.section-6 .container .color-5 {background: #1ded7e}
